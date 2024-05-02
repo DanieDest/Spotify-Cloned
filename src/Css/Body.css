@@ -1,0 +1,105 @@
+.Container-body {
+    height: 800px;
+    background: linear-gradient(rgb(43, 43, 43), rgb(22, 22, 22), rgb(19, 18, 18));
+    width: 79rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 23em;
+    top: 12px;
+    display: block;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    user-select: none;
+}
+
+.Container-body::-webkit-scrollbar {
+    width: 6px!important; /* width of the scrollbar */
+}
+
+.Container-body::-webkit-scrollbar-track {
+    background: #333; /* color of the track */
+     border-radius: 0 5px 5px  0;
+}
+
+.Container-body::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar itself */
+    border-radius: 5px;  /*roundness of the scrollbar thumb  */
+}
+
+
+.Body-container {
+    width: 76.6em;
+    height: 480px;
+    background: linear-gradient(rgb(43, 43, ), rgb(22, 22, 22), rgb(19, 18, 18));
+    position: absolute;
+    display: flex;
+    top: 8em;
+    left: 13px;
+}
+
+
+.made-for-songs {
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    height: 30px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 20px;
+}
+
+.made-for-songs h1 {
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.made-for-songs h1:hover {
+    text-decoration: underline;
+}
+
+.made-for-songs small:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.section-made-songs {
+    /* background-color: rgb(117, 115, 115); */
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    margin-top: 40px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+
+.card {
+    width: 190px;
+    height: 254px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #ff0022 100%);
+    border-radius: 20px;
+    transition: all .3s;
+   }
+   
+   .card2 {
+    width: 190px;
+    height: 254px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   }

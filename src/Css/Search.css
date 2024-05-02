@@ -1,0 +1,158 @@
+.spotify__body {
+    display: grid;
+    grid-template-columns: 22.7vw 85vw;
+    width: 100%;
+    height: 100%;
+    background-color: #0c0a0a;
+}
+
+.body-search {
+    height: 800px;
+    background: linear-gradient(rgb(43, 43, 43), rgb(22, 22, 22), rgb(19, 18, 18));
+    width: 79rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 23em;
+    top: 12px;
+    display: block;
+    padding: 0 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    user-select: none;
+    
+}
+
+.body-search::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+
+.body-search::-webkit-scrollbar-track {
+    background: #333; /* color of the track */
+     border-radius: 0 5px 5px  0;
+}
+
+.body-search::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar itself */
+    border-radius: 5px;  /*roundness of the scrollbar thumb  */
+}
+
+
+.nav-bar {
+    width: 77em;
+    height: 70px;
+    background-color: rgba(189, 16, 16, 0.788);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: fixed;
+}
+
+.btn-fa-span {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-fa-span button {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background: black;
+}
+
+.container-input {
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content;
+    margin-left: 20px;
+  }
+
+  .mainbox:hover {
+    border: 1px solid rgba(218, 215, 215, 0.651);
+    border-radius: 160px;
+  }
+  
+  .mainbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 330px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 160px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+  }
+  
+  .checkbox:focus {
+    border: none;
+    outline: none;
+  }
+  
+  .checkbox:checked {
+    right: 10px;
+  }
+  
+  .checkbox:checked ~ .mainbox {
+    width: 50px;
+  }
+  
+  .checkbox:checked ~ .mainbox .search_input {
+    width: 0;
+    height: 0px;
+  }
+  
+  .checkbox:checked ~ .mainbox .iconContainer {
+    padding-right: 8px;
+  }
+  
+  .checkbox {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    z-index: 9;
+    cursor: pointer;
+    appearance: none;
+  }
+  
+  .search_input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 270px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: 1em;
+    color: white;
+    transition: all 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .search_input::placeholder {
+    color: rgba(255, 255, 255, 0.776);
+  }
+  
+  .iconContainer {
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: fit-content;
+    transition: all 0.3s ease;
+  }
+  
+  .search_icon {
+    box-sizing: border-box;
+    fill: white;
+    font-size: 1.3em;
+  }

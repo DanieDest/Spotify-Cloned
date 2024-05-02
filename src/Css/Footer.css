@@ -1,0 +1,9 @@
+.Container-footer {
+    width: 76.6em;
+    height: 500px;
+    background-color: rgb(102, 101, 101);
+    position: absolute;
+    display: flex;
+    top: 38em;
+    left: 13px;
+}

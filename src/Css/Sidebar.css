@@ -1,0 +1,302 @@
+.homeBar {
+    width: 420px;
+    height: 155px;
+    background-color: #212121;
+    color: #fff;
+    margin: 10px 5px;
+    border-radius: 10px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  
+  .dDJltW {
+    fill: var(--decorative-base, #f1f1f1);
+    stroke: transparent;
+    padding: 20px 25px;
+    cursor: pointer;
+   
+  }
+  
+  .wrapLi {
+    /* border: 1px solid white; */
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    left: -15px;
+  
+  }
+  
+  .Bh3b80dIrbc0keQ9kdso .home-active-icon, .Bh3b80dIrbc0keQ9kdso .search-active-icon {
+    color: #fff;
+    display: block;
+    position: relative;
+    
+    
+  }
+  
+  .bneLcE {
+    fill: currentcolor;
+    width: var(--encore-graphic-size-decorative-base, 24px);
+    height: var(--encore-graphic-size-decorative-base, 24px);
+    margin-left: -10px;
+  }
+  
+  .home{
+     color: #fff;
+     margin-left: 15px;
+     font-weight: 700;
+     text-decoration: none;
+     cursor: pointer;
+  }
+  
+  .wrapLii{
+    /* border: 1px solid white; */
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -45px;
+    left: -15px;
+  }
+  
+  
+  
+  /* MY LIBRARY BODY */
+  
+  .LibraryDiv {
+    width: 420px;
+    height: 850px;
+    background-color: #212121;
+    color: #c9c7c7;
+    margin: 0 5px;
+    display: flex;
+    flex-shrink: 1;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .yourLib {
+    /* border: 1px solid white; */
+    padding: 15px;
+    display: flex;
+    margin: 0 20px;
+    position: absolute;
+  }
+  
+  .span-lib {
+    display: flex;
+  }
+  
+  .btn-div {
+    /* border: 1px solid #ffffff; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 20em;
+    gap: 30px;
+  }
+  
+  .btn-plus {
+    border-radius: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #c2c0c0;
+    margin: 8px -10px;
+    
+  }
+  
+  .btn-plus:hover {
+    background-color: #3b353583;
+    transition-delay: 0.2s;
+  }
+  
+  .drop-div {
+    width: 250px;
+    height: 155px;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    display: none;
+    background-color: #0f0f0f;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    margin-top: 18px;
+    margin-left: -8px;
+    
+  }
+  
+  .create-new-playlist {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  
+  .create-new-playlist:hover {
+    background-color: #69666691;
+    border-radius: 5px;
+  }
+  
+  .dYnaPI {
+    fill: currentcolor;
+    width: var(--encore-graphic-size-decorative-smaller, 16px);
+    height: var(--encore-graphic-size-decorative-smaller, 16px);
+    margin-left: 15px;
+  }
+  
+  .create-playlist-folder{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .create-playlist-folder:hover{
+    background-color: #69666691;
+    border-radius: 5px;
+  }
+  
+  .create-playlist-upload {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  
+  .input-div {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(252, 172, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px rgb(252, 185, 1) , inset 0px 0px 10px rgb(252, 193, 1),0px 0px 5px rgb(255, 255, 255);
+    animation: flicker 2s linear infinite;
+  }
+  
+  .icon {
+    color: rgb(252, 235, 1);
+    font-size: 2rem;
+    cursor: pointer;
+    animation: iconflicker 2s linear infinite;
+  }
+  
+  .input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+  }
+  
+  @keyframes flicker {
+    0% {
+      border: 2px solid rgb(122, 252, 1);
+      box-shadow: 0px 0px 100px rgb(122, 252, 1) , inset 0px 0px 10px rgb(101, 252, 1),0px 0px 5px rgb(255, 255, 255);
+    }
+  
+    5% {
+      border: none;
+      box-shadow: none;
+    }
+  
+    10% {
+      border: 2px solid rgb(185, 252, 1);
+      box-shadow: 0px 0px 100px rgb(227, 252, 1) , inset 0px 0px 10px rgb(214, 252, 1),0px 0px 5px rgb(255, 255, 255);
+    }
+  
+    25% {
+      border: none;
+      box-shadow: none;
+    }
+  
+    30% {
+      border: 2px solid rgb(252, 122, 1);
+      box-shadow: 0px 0px 100px rgb(252, 152, 1) , inset 0px 0px 10px rgb(252, 164, 1),0px 0px 5px rgb(255, 255, 255);
+    }
+  
+    100% {
+      border: 2px solid rgb(252, 1, 76);
+      box-shadow: 0px 0px 100px rgb(252, 1, 106) , inset 0px 0px 10px rgb(252, 1, 85),0px 0px 5px rgb(255, 255, 255);
+    }
+  }
+  
+  @keyframes iconflicker {
+    0% {
+      opacity: 1;
+    }
+  
+    5% {
+      opacity: 0.2;
+    }
+  
+    10% {
+      opacity: 1;
+    }
+  
+    25% {
+      opacity: 0.2;
+    }
+  
+    30% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  .btn-plus:focus-within .drop-div {
+    display: block;
+  }
+  
+  .btn-arrow {
+   border-radius: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #c7c7c7;
+    /* margin: 8px -10px; */
+    
+  }
+  
+  .btn-arrow:hover {
+    background-color: #3b353583;
+    transition-delay: 0.2s;
+  }
+  
+  .user-create-playlist-container {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 80px;
+  }
+  
+  
+ 
