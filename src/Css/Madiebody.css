@@ -1,0 +1,37 @@
+@media screen and (min-width: 1280px){
+
+    .Containerbody {
+        height: 800px;
+        /* background: linear-gradient(rgb(43, 43, 43), rgb(22, 22, 22), rgb(100, 24, 24)); */
+        background-color: white;
+        width: 39rem;
+        border-radius : 10px;
+        position: absolute;
+        left: 20em;
+        top: 12px;
+        display: block;
+        margin: auto;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        user-select: none;
+    }
+    
+    .Container-body::-webkit-scrollbar {
+        width: 6px !important;
+        /* width of the scrollbar */
+    }
+    
+    .Container-body::-webkit-scrollbar-track {
+        background: #333;
+        /* color of the track */
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .Container-body::-webkit-scrollbar-thumb {
+        background: #888;
+        /* color of the scrollbar itself */
+        border-radius: 5px;
+        /*roundness of the scrollbar thumb  */
+    }
+    
+}

@@ -13,15 +13,28 @@
     grid-template-columns: 22.7vw 85vw;
     width: 100%;
     height: 100vh;
-    background-color: #0c0a0a;
+    background-color: #2c2727;
     overflow: hidden;
 }
-
+/* 
 .body {
 
     width: 100%;
     height: 100%;
     overflow: auto;
+    background-color: bisque;
+   
     
-}
+} */
+/* 
+
+.body__contents {
+    background-color: antiquewhite;
+    width: 100px;
+    height: 200px;
+    position: absolute;
+} */
+
+
+
 

@@ -1,6 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, {  useRef, useState, useEffect } from "react";
 import "../Css/Navbar.css";
 import "../App.css";
+import "../Css/Madiescreennabar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
@@ -9,29 +10,35 @@ import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const [navBackground, setNavBackground] = useState(false);
   const bodyRef = useRef(document.body);
- 
 
   useEffect(() => {
+    const bodyElement = bodyRef.current;
+    let prevScrollPos = bodyElement.scrollTop;
+
     const handleScroll = () => {
-      const scrollTop = bodyRef.current.scrollTop;
-      if (scrollTop > 0) {
+      const currentScrollPos = bodyElement.scrollTop;
+      console.log("Current scroll position:", currentScrollPos);
+      if (currentScrollPos > prevScrollPos) {
+        // Scrolling down
         setNavBackground(true);
       } else {
-        setNavBackground(false);
+        // Scrolling up
+        setNavBackground(currentScrollPos > 0);
       }
+      console.log("navBackground:", navBackground);
+      prevScrollPos = currentScrollPos;
     };
 
-    bodyRef.current.addEventListener('scroll', handleScroll);
+    bodyElement.addEventListener('scroll', handleScroll);
 
     return () => {
-      bodyRef.current.removeEventListener('scroll', handleScroll);
+      bodyElement.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
 
-
   return (
-    <div className={`Container-Nav ${navBackground ? 'navBackground' : ''}`}>
+    <div  className={`Container-Nav ${navBackground ? 'navBackground' : ''}`}>
       <div className="flex-allnav">
         <div className="tow-angle-div">
           <button title="Go Back">

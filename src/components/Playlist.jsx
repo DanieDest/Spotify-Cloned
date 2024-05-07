@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "../Css/Playlist.css"
+import React, {  useEffect, useState } from "react";
+import "../Css/Playlist.css";
 import Sidebar from "./Sidebar";
 import Navbar from "../components/Navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,14 +8,14 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { useStateProvider } from "../utils/StateProvider";
 import axios from "axios";
 import { reducerCases } from "../utils/Constants";
+import "../Css/MadiePlaylist.css";
+import Footer from "../components/Footer";
 
 
 
 const Playlist = () => {
-  const [{ token, selectedPlaylistId, selectedPlaylist, loading }, dispatch] =
-    useStateProvider();
-
-    const [error, setError] = useState(null);
+  const [{ token, selectedPlaylistId, selectedPlaylist, loading }, dispatch] = useStateProvider();
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getInitialPlaylist = async () => {
@@ -52,6 +52,12 @@ const Playlist = () => {
         dispatch({ type: reducerCases.SET_PLAYLIST, selectedPlaylist });
       } catch (error) {
         console.error("Error fetching playlist:", error);
+        if (error.response) {
+          console.error("Response data:", error.response.data);
+          console.error("Response status:", error.response.status);
+          console.error("Response headers:", error.response.headers);
+        }
+        setError("Failed to fetch playlist. Please try again later.");
       }
     };
 
@@ -59,9 +65,9 @@ const Playlist = () => {
     getInitialPlaylist();
   }, [token, dispatch, selectedPlaylistId]);
 
-  function formatDate(dateSring) {
+  function formatDate(dateString) {
     const currentDate = new Date();
-    const dateAdded = new Date(dateSring);
+    const dateAdded = new Date(dateString);
     const timeDifference = currentDate.getTime() - dateAdded.getTime();
     const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
 
@@ -75,32 +81,38 @@ const Playlist = () => {
   };
 
   const formatDuration = (milliseconds) => {
-      const totalSeconds = Math.floor(milliseconds / 1000);
-      const mintues = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const mintues = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
 
-      const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
-      return `${mintues}:${formattedSeconds}`;
+    return `${mintues}:${formattedSeconds}`;
   }
 
   if (loading) {
     return <div>Loading...</div>;
-  };
+  }
+
+  if (error) {
+    return <div className="error">{error}</div>;
+  }
+
+
 
   return (
     <>
       {selectedPlaylist && (
         <div>
-          <div className="Playlist__body">
+          <div className="Playlist__body" >
             <Sidebar />
-            <div className="Playlist_body">
+            <div className="Playlist_body" id="Playlist_body">
               <Navbar />
               <div className="body__contentsplaylist">
                 <div className="image-span">
                   <img
                     src={selectedPlaylist.image}
-                    alt="Playlist Image"
+                    alt="Playlist"
                     className="image-span"
                   />
                 </div>
@@ -382,7 +394,7 @@ const Playlist = () => {
                   style={{
                     width: "200px",
                     height: "40px",
-                    position: "flex",
+                    display: "flex",
                     position: "relative",
                     left: "64em",
                     alignItems: "center",
@@ -512,6 +524,9 @@ const Playlist = () => {
               </div>
             </div>
           </div>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       )}
       ;

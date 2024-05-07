@@ -1,13 +1,14 @@
 .homeBar {
-    width: 420px;
-    height: 155px;
-    background-color: #212121;
-    color: #fff;
-    margin: 10px 5px;
-    border-radius: 10px;
-    position: relative;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 350px;
+  height: 110px;
+  background-color: #212121;
+  color: #fff;
+
+  border-radius: 10px;
+  position: relative;
+  top: -5px;
+  flex-direction: column;
+  align-items: flex-start;
     
   }
   

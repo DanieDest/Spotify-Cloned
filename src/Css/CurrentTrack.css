@@ -1,0 +1,25 @@
+.track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 20px;
+}
+
+.track__info {
+    display: flex;
+    flex-direction: column; 
+    
+
+}
+
+.track__info  h4 {
+    color: #ffffff;
+    position: relative;
+    top: 1.8em;
+}
+
+.track__info  h6 {
+    color: #b3b3b3;
+    position: relative;
+    top: -1.8em;
+}

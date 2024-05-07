@@ -2,10 +2,11 @@ import React from "react";
 import "../Css/Body.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import "../Css/Madiebody.css";
 
 const Body = () => {
     return (
-      <div className="Container-body">
+      <div className="Containerbody">
          <Navbar />
 
          <div className="Body-container">

@@ -2,19 +2,23 @@
     display: grid;
     grid-template-columns: 22.7vw 85vw;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    display: flex;
     height: 100vh;
-    background-color: #030303;
+    background-color: #070606;
+    overflow-y: hidden;
+    overflow-x: hidden;
     overflow: hidden;
 }
 
-.Playlist_body {
-    height: 860px;
+#Playlist_body {
+  width: 100%;
+    height: 800px;
     background: linear-gradient(rgb(180,51,43), rgb(107,30,26), rgb(18,18,18), rgb(19, 18, 18));
     width: 79rem;
     border-radius: 10px;
     position: absolute;
-    left: 23em;
+    right: 3em!important;
     top: 12px;
     display: block;
     padding: 0 5px;
@@ -56,11 +60,13 @@
     border-radius: 10px;
     background-color: transparent;
     margin-right: 40px;
+    position: relative;
+    top: -3em;
 }
 
 .playlist_song {
     position: relative;
-    top: 2em;
+    top: -4em;
 }
 
 .playlist_song h1 {
@@ -76,8 +82,9 @@
     display: flex;
     align-items: center;
     padding: 0 50px;
-    top: 6em;
-    z-index: 999;
+    top: 1em;
+
+
 }
 
 
@@ -131,6 +138,7 @@
     top: 30px;
     display: none;
     box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
     
   }
   
@@ -260,6 +268,7 @@
   left: -7.5em;
   position: absolute;
   display: none;
+  z-index: 1;
 
 }
 

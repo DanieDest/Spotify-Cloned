@@ -1,0 +1,25 @@
+.Container__playerState {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 1em 50rem;
+    gap: 2rem;
+    svg {
+        color: #b3b3b3;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+
+.state {
+    svg {
+        color: #ffffff;
+    }
+}
+
+.previous, .next,.state {
+    font-size: 2rem;
+    cursor: pointer;
+}
